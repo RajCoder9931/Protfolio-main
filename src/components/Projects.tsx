@@ -4,6 +4,7 @@ import Social from '../assets/Socialmedia.png';
 import Luna from '../assets/Luna.png';
 import Bazzarway from '../assets/Bazzarway.png';
 import Admin from '../assets/Admin.png';
+
 const Projects = () => {
   const [filter, setFilter] = useState("all");
 
@@ -17,7 +18,7 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1170&q=80",
       technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       category: "fullstack",
-      demoUrl: "https://example.com",
+      demoUrl: "",
       githubUrl: "https://github.com/RajCoder9931/Ims",
     },
     {
@@ -53,7 +54,7 @@ const Projects = () => {
         "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1170&q=80",
       technologies: ["React", "CSS", "JavaScript", "MongoDB", "Bootstrap"],
       category: "fullstack",
-      demoUrl: "https://jobboard-jfgj.onrender.com/",
+      demoUrl: "https://final-job-board-project.vercel.app/",
       githubUrl: "https://github.com/RajCoder9931/Job-Board",
     },
     {
@@ -64,7 +65,7 @@ const Projects = () => {
       image: Admin,
       technologies: ["React", "CSS", "JavaScript", "MongoDB", "Bootstrap"],
       category: "frontend",
-      demoUrl: "https://admin-dashboard-three-omega.vercel.app/dashboard",
+      demoUrl: "https://ims-admin-dashboard.vercel.app/dashboard",
       githubUrl: "https://github.com/RajCoder9931/Admin-Dashboard",
     },
     {
@@ -75,8 +76,8 @@ const Projects = () => {
       image:Social,
       technologies: ["React", "Tailwind", "Express", "Firebase", "MongoDB"],
       category: "fullstack",
-      demoUrl: "",
-      githubUrl: "",
+      demoUrl: "https://beinersfrddg-petz.vercel.app/login",
+      githubUrl: "https://github.com/RajCoder9931/Being-Petz.git",
     },
     {
       id: 7,
@@ -86,21 +87,21 @@ const Projects = () => {
       image:Luna,
       technologies: ["React", "Node", "MongoDB", "Tailwind CSS"],
       category: "fullstack",
-      demoUrl: "",
-      githubUrl: "",
+      demoUrl: "https://lunaa-admin-panel2.vercel.app/",
+      githubUrl: "https://github.com/RajCoder9931/Lunaa-Admin-Panel2.git",
     },
-    {
-      id: 8,
-      title: "BazaarWay Multi-Role E-Commerce System",
-      description:
-        "Backend system with Super Admin, Vendor & Sub-vendor panels, JWT auth & product APIs.",
-      image:
-      Bazzarway,
-      technologies: ["Node.js", "Express", "MongoDB", "JWT", "Firebase"],
-      category: "backend",
-      demoUrl: "",
-      githubUrl: "",
-    },
+    // {
+    //   id: 8,
+    //   title: "BazaarWay Multi-Role E-Commerce System",
+    //   description:
+    //     "Backend system with Super Admin, Vendor & Sub-vendor panels, JWT auth & product APIs.",
+    //   image:
+    //   Bazzarway,
+    //   technologies: ["Node.js", "Express", "MongoDB", "JWT", "Firebase"],
+    //   category: "backend",
+    //   demoUrl: "",
+    //   githubUrl: "",
+    // },
   ];
 
   const filteredProjects =
