@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,9 +8,9 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Experience from './Experience';
- 
+
 export function App() {
- useEffect(() => {
+  useEffect(() => {
     fetch("https://hook.eu1.make.com/9z1gyb1b7ygjyp2vcnh6vepqhx35uyvp", {
       method: "POST",
       headers: {
@@ -25,18 +25,20 @@ export function App() {
       }),
     }).catch(err => console.error("Tracking error:", err));
   }, []);
-  return <div className="font-sans bg-slate-50 text-slate-800">
+
+  return (
+    <div className="font-sans bg-slate-50 text-slate-800">
       <Header />
       <main>
         <Hero />
         <About />
-        <Experience/>
-         <Projects />
+        <Experience />
+        <Projects />
         <Achievements />
         <Education />
         <Contact />
-        
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 }
