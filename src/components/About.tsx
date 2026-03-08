@@ -1,4 +1,3 @@
-import React from 'react';
 
 const About = () => {
   const skills = [
@@ -8,7 +7,7 @@ const About = () => {
     },
     {
       category: 'Backend',
-      items: ['Node.js', 'Express', 'Php']
+      items: ['Node.js', 'Express', 'Php', 'Python']
     },
     {
       category: 'Database',
@@ -33,7 +32,7 @@ const About = () => {
         {/* About Text */}
         <div className="max-w-3xl mx-auto mb-12 space-y-6">
           <p className="text-lg text-slate-600 text-justify">
-            Hello! I’m <strong>Ravi Raj Tiwari</strong>, a passionate Full Stack Developer with over 1.5 years of hands-on experience building modern, scalable, and user-centric web applications.
+            Hello! I’m <strong>Ravi Raj Tiwari</strong>, a passionate Full Stack Developer with over 2 years of hands-on experience building modern, scalable, and user-centric web applications.
             My journey in development began with a simple curiosity about how websites function, which soon transformed into a deep interest in creating meaningful digital experiences that solve real-world problems.
           </p>
 

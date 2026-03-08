@@ -85,7 +85,7 @@ const Hero = () => {
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-full shadow-lg">
                 <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
-                  19+
+                  20+
                 </div>
               </div>
             </div>
