@@ -95,7 +95,7 @@ const Projects = () => {
       title: "ERP & Recruitment CRM System",
       description:
         "A full-stack enterprise system to manage internal workflows and streamline hiring with AI-based resume screening.",
-      image: , 
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcqY8yaPw1Z2OHHX4hUjuVAQ_NsZm4QT1GWw&s", 
       technologies: [
         "React",
         "Tailwind CSS",
@@ -114,7 +114,7 @@ const Projects = () => {
       title: "CRD Placement Management Mobile App",
       description:
         "A React Native app for managing college placements with one-click job applications and ATS-based resume shortlisting.",
-      image: , 
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHIRRY0pFksf9-YtO5CpfbPszjmgP__ThEBg&s", 
       technologies: [
         "React Native",
         "Node.js",
