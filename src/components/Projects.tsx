@@ -90,18 +90,43 @@ const Projects = () => {
       demoUrl: "https://lunaa-admin-panel2.vercel.app/",
       githubUrl: "https://github.com/RajCoder9931/Lunaa-Admin-Panel2.git",
     },
-    // {
-    //   id: 8,
-    //   title: "BazaarWay Multi-Role E-Commerce System",
-    //   description:
-    //     "Backend system with Super Admin, Vendor & Sub-vendor panels, JWT auth & product APIs.",
-    //   image:
-    //   Bazzarway,
-    //   technologies: ["Node.js", "Express", "MongoDB", "JWT", "Firebase"],
-    //   category: "backend",
-    //   demoUrl: "",
-    //   githubUrl: "",
-    // },
+    {
+      id: 8,
+      title: "ERP & Recruitment CRM System",
+      description:
+        "A full-stack enterprise system to manage internal workflows and streamline hiring with AI-based resume screening.",
+      image: , 
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Python",
+        "VPS",
+      ],
+      category: "fullstack",
+      demoUrl: "", // agar live nahi hai toh empty ya private
+      githubUrl: "", // private hai toh blank chhod de
+    },
+    {
+      id: 9,
+      title: "CRD Placement Management Mobile App",
+      description:
+        "A React Native app for managing college placements with one-click job applications and ATS-based resume shortlisting.",
+      image: , 
+      technologies: [
+        "React Native",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+      ],
+      category: "fullstack",
+      demoUrl: "www.ongoing", 
+      githubUrl: "Private Repo",
+    }
+   
   ];
 
   const filteredProjects =

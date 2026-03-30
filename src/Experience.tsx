@@ -3,61 +3,50 @@ import argosmobLogo from "./assets/Argosmob.jpg";
 
 const experiences = [
   {
-    role: "Full Stack Developer — Inavsys IT Consultant (A Unit of Navsant Group)",
+    role: "Full Stack Developer — Inavsys IT Consultant (Navsant Group)",
     company: "Inavsys IT Consultant",
     logo: inavsysLogo,
     date: "Dec 2025 – Present",
     description:
-      "Working as a Full Stack Developer developing scalable business web applications and modern digital solutions.",
+      "Working on ERP systems and recruitment CRM platforms, contributing to full-stack development and system design.",
     points: [
-      "Developing and maintaining full-stack web applications using MERN stack technologies.",
-      "Building responsive and dynamic user interfaces with React.js and Tailwind CSS.",
-      "Designing REST APIs and backend services using Node.js and Express.js.",
-      "Managing databases and optimizing queries using MongoDB.",
-      "Collaborating with team members using Git for version control and project management.",
+      "Developing and optimizing frontend for ERP systems to improve usability and workflow efficiency.",
+      "Collaborating on backend APIs and system architecture using Node.js and Express.js.",
+      "Building a recruitment CRM platform with candidate tracking and hiring workflow management.",
+      "Integrating AI-based resume screening system for automated candidate shortlisting.",
+      "Deploying and managing backend services (Python + MongoDB) on VPS for high availability.",
     ],
-    tech: "React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Git",
+    tech:
+      "React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Python, VPS, Git",
   },
   {
-    role: "Full Stack Developer — Argosmob",
+    role: "Full Stack Developer (Intern + Contract) — Argosmob",
     company: "Argosmob",
     logo: argosmobLogo,
-    date: "Aug 2024 – Sep 2024",
+    date: "Jun 2025 – Sep 2025",
     description:
-      "Worked as a Full Stack Developer where I contributed to building a pet-focused social media platform.",
+      "Contributed to building scalable web applications including social media and e-commerce platforms.",
     points: [
-      "Developed core features like post creation, reporting, and user interaction.",
-      "Implemented real-time chat and live updates using Firebase.",
-      "Integrated REST APIs between frontend and backend.",
-      "Built a Pet Management System for user-created pet profiles.",
+      "Developed a pet-centric social media platform with posts, likes, comments, and real-time chat functionality.",
+      "Built and integrated RESTful APIs ensuring seamless frontend-backend communication.",
+      "Designed and implemented a pet management system for user profiles.",
+      "Worked on a multi-role e-commerce system (Admin, Vendor, Sub-vendor) with full-stack development.",
+      "Improved API performance and optimized data handling for better scalability.",
     ],
-    tech: "React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Firebase",
-  },
-  {
-    role: "Backend Developer — Argosmob (Internship)",
-    company: "Argosmob",
-    logo: argosmobLogo,
-    date: "Jun 2024 – Aug 2024",
-    description:
-      "Completed a backend development internship focusing on scalable E-commerce architecture.",
-    points: [
-      "Developed role-based E-commerce panels (Admin, Vendor, Sub-Vendor, Super-Vendor).",
-      "Created and optimized REST APIs for products, orders, and user management.",
-      "Improved backend logic for smooth integration with React frontend.",
-      "Worked closely with the team to enhance system performance.",
-    ],
-    tech: "Node.js, Express.js, MongoDB, JWT, Firebase, Git, Postman",
+    tech:
+      "React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Firebase, Git",
   },
   {
     role: "Full Stack Developer — Inventory Management System (Client Project)",
+    company: "Client Project",
     date: "Jan 2023 – Apr 2023",
     description:
-      "Delivered a complete inventory and billing system for a client’s business operations.",
+      "Delivered a complete inventory and billing system for business operations.",
     points: [
-      "Built modules for billing, employee management, customer handling.",
-      "Designed the interface using HTML, CSS, and JavaScript.",
-      "Developed backend using PHP & MySQL with secure data storage.",
-      "Delivered a stable, user-friendly system tailored to the client’s needs.",
+      "Built modules for billing, employee management, and customer handling.",
+      "Designed responsive UI using HTML, CSS, and JavaScript.",
+      "Developed backend using PHP and MySQL with secure data handling.",
+      "Delivered a stable and user-friendly system tailored to client requirements.",
     ],
     tech: "HTML, CSS, JavaScript, PHP, MySQL",
   },
