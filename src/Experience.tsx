@@ -3,10 +3,26 @@ import argosmobLogo from "./assets/Argosmob.jpg";
 
 const experiences = [
   {
+    role: "Independent Full Stack Developer",
+    company: "Self-Employed / Personal Projects",
+    date: "Jun 2026 – Present",
+    description:
+      "Building AI-powered applications, browser extensions, and full-stack web products while exploring automation and productivity solutions.",
+    points: [
+      "Developed AI-powered job application automation tools and productivity extensions.",
+      "Built browser extensions using JavaScript and Chrome Extension APIs.",
+      "Designed and deployed full-stack applications using React.js, Node.js, Express.js, and MongoDB.",
+      "Integrated AI APIs for content generation, automation, and workflow optimization.",
+      "Managed deployment, maintenance, and version control of multiple independent projects."
+    ],
+    tech:
+      "React.js, Node.js, Express.js, MongoDB, JavaScript, Chrome Extension API, AI APIs, Git"
+  },
+  {
     role: "Full Stack Developer — Inavsys IT Consultant (Navsant Group)",
     company: "Inavsys IT Consultant",
     logo: inavsysLogo,
-    date: "Dec 2025 – Present",
+    date: "Dec 2025 – May 2026",
     description:
       "Working on ERP systems and recruitment CRM platforms, contributing to full-stack development and system design.",
     points: [
@@ -19,6 +35,7 @@ const experiences = [
     tech:
       "React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Python, VPS, Git",
   },
+
   {
     role: "Full Stack Developer (Intern + Contract) — Argosmob",
     company: "Argosmob",
