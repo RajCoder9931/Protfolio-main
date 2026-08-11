@@ -134,7 +134,7 @@ const Experience = () => {
                   <img
                     src={exp.logo}
                     alt={exp.company}
-                    className="w-12 h-12 object-contain"
+                    className="w-15 h-15 object-contain"
                   />
                 )}
 
