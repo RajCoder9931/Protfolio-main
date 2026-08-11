@@ -29,8 +29,8 @@ const Header = () => {
   const menuItems = [
     'home',
     'about',
-    'projects',
     'experience', // <-- Added here
+    'projects',
     'achievements',
     'education',
     'contact'
