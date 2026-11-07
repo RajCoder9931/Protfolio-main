@@ -41,6 +41,15 @@ export const SKILL_GROUPS: SkillGroup[] = [
     ],
   },
   {
+    title: 'AI Automation & Chatbots',
+    blurb: 'Chatbots and workflows that reply, qualify and book for you.',
+    items: [
+      'AI Chatbot Development', 'WATI', 'AiSensy', 'Gallabox',
+      'WhatsApp Automation', 'Workflow Automation', 'AI APIs',
+      'Lead Qualification Bots', 'Meeting & Enquiry Automation',
+    ],
+  },
+  {
     title: 'Digital Marketing & Ads',
     blurb: 'Campaigns that turn attention into leads and sales.',
     items: [
@@ -49,15 +58,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
       'Audience Research & Targeting', 'Retargeting', 'Campaign Optimization',
       'Social Media Management', 'Content & Posting Strategy', 'Business Growth',
       'Meta Business Suite', 'Google Business Profile',
-    ],
-  },
-  {
-    title: 'AI Automation & Chatbots',
-    blurb: 'Chatbots and workflows that reply, qualify and book for you.',
-    items: [
-      'AI Chatbot Development', 'WATI', 'AiSensy', 'Gallabox',
-      'WhatsApp Automation', 'Workflow Automation', 'AI APIs',
-      'Lead Qualification Bots', 'Meeting & Enquiry Automation',
     ],
   },
 ];
