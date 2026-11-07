@@ -60,7 +60,9 @@ const Footer = () => {
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent font-serif text-lg font-bold text-paper">
                 R
               </span>
-              <span className="font-serif text-lg font-semibold">{PROFILE.name}</span>
+              <span className="font-serif text-lg font-semibold">
+                <span className="text-indigo-400">Ravi</span> Raj Tiwari
+              </span>
             </div>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-paper/60">
               {PROFILE.tagline} based in {PROFILE.location}. I build your website, run your
