@@ -47,7 +47,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 sm:py-28">
       <div className="section-shell">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent-dark via-accent to-[#1B6B3C] p-8 text-paper shadow-pop sm:p-12 lg:p-16">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent-dark via-accent to-[#7C3AED] p-8 text-paper shadow-pop sm:p-12 lg:p-16">
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
           <div className="pointer-events-none absolute -bottom-32 -left-16 h-72 w-72 rounded-full bg-white/5 blur-2xl" />
 
