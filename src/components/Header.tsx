@@ -43,10 +43,10 @@ const Header = () => {
           }}
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent font-serif text-lg font-bold text-paper">
-            R
+            B
           </span>
-          <span className={`font-serif text-lg font-semibold tracking-tight transition-colors text-ink`}>
-            <span className="text-indigo-600">Ravi</span> Raj Tiwari
+          <span className={`font-sans text-lg font-bold tracking-tight transition-colors text-ink`}>
+            <span className="text-indigo-600">Bulid</span>&Brush.com
           </span>
         </a>
 
