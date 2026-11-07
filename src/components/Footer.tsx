@@ -1,57 +1,35 @@
-import React from 'react';
+import { PROFILE } from '../lib/site';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-  return <footer className="bg-slate-800 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <h2 className="text-2xl font-bold">
-              Bulid<span className="text-indigo-400">&Brush.com</span>
-            </h2>
-            <p className="text-slate-400 mt-1">Full Stack Developer</p>
+  return (
+    <footer className="border-t border-line bg-ink text-paper">
+      <div className="section-shell py-12">
+        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+          <div>
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent font-serif text-lg font-bold text-paper">
+                R
+              </span>
+              <span className="font-serif text-lg font-semibold">{PROFILE.name}</span>
+            </div>
+            <p className="mt-2 text-sm text-paper/60">{PROFILE.tagline}</p>
           </div>
-          <div className="mb-6 md:mb-0">
-            <ul className="flex flex-wrap justify-center gap-4 md:gap-8">
-              <li>
-                <a href="#home" className="text-slate-300 hover:text-indigo-400 transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-slate-300 hover:text-indigo-400 transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-slate-300 hover:text-indigo-400 transition-colors">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-slate-300 hover:text-indigo-400 transition-colors">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <button onClick={scrollToTop} className="bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full transition-colors" aria-label="Scroll to top">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
-            </svg>
-          </button>
+
+          <ul className="flex flex-wrap gap-x-7 gap-y-3 text-sm">
+            <li><a href={PROFILE.github} target="_blank" rel="noreferrer" className="text-paper/70 transition-colors hover:text-paper">GitHub</a></li>
+            <li><a href={PROFILE.linkedin} target="_blank" rel="noreferrer" className="text-paper/70 transition-colors hover:text-paper">LinkedIn</a></li>
+            <li><a href={PROFILE.instagram} target="_blank" rel="noreferrer" className="text-paper/70 transition-colors hover:text-paper">Instagram</a></li>
+            <li><a href={`mailto:${PROFILE.email}`} className="text-paper/70 transition-colors hover:text-paper">Email</a></li>
+          </ul>
         </div>
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-          <p className="text-slate-400">
-            © {currentYear} Developer Portfolio. All rights reserved.
-          </p>
+
+        <div className="mt-10 border-t border-paper/10 pt-6 text-center text-sm text-paper/50">
+          © {currentYear} {PROFILE.name}. Built with React, Tailwind CSS and a custom AI assistant.
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
