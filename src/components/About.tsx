@@ -56,10 +56,10 @@ const About = () => {
 
           <div className="grid items-start gap-6 lg:grid-cols-3">
             {SKILL_GROUPS.map((group, gi) => (
-              <div key={group.title} className="card p-7">
+              <div key={group.title} className="card-glass p-7">
                 <div className="flex items-center justify-between">
                   <h3 className="font-serif text-xl font-semibold text-ink">{group.title}</h3>
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">
+                  <span className="icon-tile h-10 w-10">
                     {GROUP_ICONS[gi % GROUP_ICONS.length]}
                   </span>
                 </div>
