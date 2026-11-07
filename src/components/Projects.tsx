@@ -1,179 +1,85 @@
-import React, { useState } from 'react';
-import ProjectCard from './ProjectCard';
-import Social from '../assets/Socialmedia.png';
-import Luna from '../assets/Luna.png';
-import Bazzarway from '../assets/Bazzarway.png';
-import Admin from '../assets/Admin.png';
+import { PROJECTS, Project } from '../lib/site';
+
+const MONOGRAM_COLORS = [
+  'bg-accent text-paper',
+  'bg-ink text-paper',
+  'bg-[#7C2D12] text-paper',
+  'bg-[#1E3A5F] text-paper',
+];
+
+const ProjectCardView = ({ project, index, large = false }: { project: Project; index: number; large?: boolean }) => (
+  <article className="card group flex h-full flex-col overflow-hidden transition-shadow hover:shadow-pop">
+    <div
+      className={`flex items-center justify-center ${large ? 'h-52 sm:h-64' : 'h-36'} ${
+        MONOGRAM_COLORS[index % MONOGRAM_COLORS.length]
+      }`}
+    >
+      <span className={`font-serif font-semibold tracking-tight ${large ? 'text-7xl' : 'text-5xl'}`}>
+        {project.title.charAt(0)}
+      </span>
+    </div>
+
+    <div className="flex flex-1 flex-col p-6 sm:p-7">
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <h3 className="font-serif text-xl font-semibold text-ink">{project.title}</h3>
+          <p className="mt-1 text-sm font-medium text-accent">{project.tagline}</p>
+        </div>
+        {project.featured && (
+          <span className="rounded-full bg-accent-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent">
+            Live product
+          </span>
+        )}
+      </div>
+
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-muted">{project.description}</p>
+
+      <div className="mt-5 flex flex-wrap gap-2">
+        {project.tech.map((t) => (
+          <span key={t} className="rounded-md bg-paper px-2.5 py-1 text-xs font-medium text-ink-muted ring-1 ring-line">
+            {t}
+          </span>
+        ))}
+      </div>
+
+      <div className="mt-6 flex items-center gap-4 text-sm font-semibold">
+        {project.liveUrl && (
+          <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-accent hover:text-accent-dark">
+            Visit live ↗
+          </a>
+        )}
+        {project.repoUrl && (
+          <a href={project.repoUrl} target="_blank" rel="noreferrer" className="text-ink-soft hover:text-ink">
+            Code ↗
+          </a>
+        )}
+      </div>
+    </div>
+  </article>
+);
 
 const Projects = () => {
-  const [filter, setFilter] = useState("all");
-
-  const projects = [
-    {
-      id: 1,
-      title: "IMS - Inventory Management System",
-      description:
-        "A complete inventory solution where admin can manage customers, employees, branches & billing.",
-      image:
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1170&q=80",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      category: "fullstack",
-      demoUrl: "",
-      githubUrl: "https://github.com/RajCoder9931/Ims",
-    },
-    {
-      id: 2,
-      title: "Task Notifier Web App",
-      description:
-        "A Trello-style drag-and-drop task manager built with Firebase storage.",
-      image:
-        "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=1332&q=80",
-      technologies: ["React", "TypeScript", "Firebase"],
-      category: "frontend",
-      demoUrl: "https://tasknotify.netlify.app/",
-      githubUrl: "https://github.com/RajCoder9931/Task-Notifyer",
-    },
-    {
-      id: 3,
-      title: "Quiz Web App",
-      description:
-        "A responsive quiz application with scoring and random questions.",
-      image:
-        "https://images.unsplash.com/photo-1611746869696-d09bce200020?auto=format&fit=crop&w=1170&q=80",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      category: "frontend",
-      demoUrl: "https://learnandearnquiz.netlify.app/",
-      githubUrl: "https://github.com/RajCoder9931/Quiz-app",
-    },
-    {
-      id: 4,
-      title: "Job Board Platform",
-      description:
-        "A full-stack job portal where employers post jobs and users can apply.",
-      image:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1170&q=80",
-      technologies: ["React", "CSS", "JavaScript", "MongoDB", "Bootstrap"],
-      category: "fullstack",
-      demoUrl: "https://final-job-board-project.vercel.app/",
-      githubUrl: "https://github.com/RajCoder9931/Job-Board",
-    },
-    {
-      id: 5,
-      title: "Admin Dashboard (Under Development)",
-      description:
-        "A dashboard to manage sales, purchases, inventory, and employees with live analytics.",
-      image: Admin,
-      technologies: ["React", "CSS", "JavaScript", "MongoDB", "Bootstrap"],
-      category: "frontend",
-      demoUrl: "https://ims-admin-dashboard.vercel.app/dashboard",
-      githubUrl: "https://github.com/RajCoder9931/Admin-Dashboard",
-    },
-    {
-      id: 6,
-      title: "Social Media WebApp",
-      description:
-        "A pet-focused social media app with real-time chat, posts, and user profiles.",
-      image:Social,
-      technologies: ["React", "Tailwind", "Express", "Firebase", "MongoDB"],
-      category: "fullstack",
-      demoUrl: "https://beinersfrddg-petz.vercel.app/login",
-      githubUrl: "https://github.com/RajCoder9931/Being-Petz.git",
-    },
-    {
-      id: 7,
-      title: "Luna E-Commerce Admin Panel",
-      description:
-        "An admin panel for managing products, orders, and payments with API sync.",
-      image:Luna,
-      technologies: ["React", "Node", "MongoDB", "Tailwind CSS"],
-      category: "fullstack",
-      demoUrl: "https://lunaa-admin-panel2.vercel.app/",
-      githubUrl: "https://github.com/RajCoder9931/Lunaa-Admin-Panel2.git",
-    },
-    {
-      id: 8,
-      title: "ERP & Recruitment CRM System",
-      description:
-        "A full-stack enterprise system to manage internal workflows and streamline hiring with AI-based resume screening.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcqY8yaPw1Z2OHHX4hUjuVAQ_NsZm4QT1GWw&s", 
-      technologies: [
-        "React",
-        "Tailwind CSS",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Python",
-        "VPS",
-      ],
-      category: "fullstack",
-      demoUrl: "", // agar live nahi hai toh empty ya private
-      githubUrl: "", // private hai toh blank chhod de
-    },
-    {
-      id: 9,
-      title: "CRD Placement Management Mobile App",
-      description:
-        "A React Native app for managing college placements with one-click job applications and ATS-based resume shortlisting.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHIRRY0pFksf9-YtO5CpfbPszjmgP__ThEBg&s", 
-      technologies: [
-        "React Native",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "JWT",
-      ],
-      category: "fullstack",
-      demoUrl: "www.ongoing", 
-      githubUrl: "Private Repo",
-    }
-   
-  ];
-
-  const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter((project) => project.category === filter);
-
   return (
-    <section id="projects" className="py-20 bg-slate-50">
-      <div className="container mx-auto px-4">
-        {/* Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-2 text-slate-800">My Projects</h2>
-          <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
+    <section id="projects" className="border-y border-line bg-white py-20 sm:py-28">
+      <div className="section-shell">
+        <div className="mb-12 max-w-3xl">
+          <p className="section-eyebrow mb-3">Projects</p>
+          <h2 className="section-title">Things I have built</h2>
+          <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+            Real products with real users, not tutorial clones. RankRaja and BillDrop are
+            live right now - click through and try them.
+          </p>
         </div>
 
-        {/* Filters */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex gap-2 flex-wrap">
-            {["all", "frontend", "backend", "fullstack"].map((category) => (
-              <button
-                key={category}
-                onClick={() => setFilter(category)}
-                className={`px-4 py-2 rounded-full text-sm capitalize transition ${
-                  filter === category
-                    ? "bg-indigo-600 text-white"
-                    : "bg-white text-slate-600 hover:bg-slate-100"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+        <div className="grid gap-6 lg:grid-cols-2">
+          {PROJECTS.filter((p) => p.featured).map((project, i) => (
+            <ProjectCardView key={project.title} project={project} index={i} large />
+          ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              technologies={project.technologies}
-              demoUrl={project.demoUrl}
-              githubUrl={project.githubUrl}
-            />
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {PROJECTS.filter((p) => !p.featured).map((project, i) => (
+            <ProjectCardView key={project.title} project={project} index={i + 2} />
           ))}
         </div>
       </div>
