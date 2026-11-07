@@ -109,16 +109,11 @@ const SERVICES = [
 
 const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setRoleIndex((i) => (i + 1) % PROFILE.roles.length);
-        setVisible(true);
-      }, 300);
-    }, 3200);
+      setRoleIndex((i) => (i + 1) % PROFILE.roles.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -140,17 +135,17 @@ const Hero = () => {
               <em className="font-medium italic text-accent">grow your business.</em>
             </h1>
 
-            <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
-              I&apos;m <span className="font-semibold text-ink">{PROFILE.name}</span> -{' '}
-              <span
-                className={`font-medium text-accent transition-opacity duration-300 ${
-                  visible ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
+            {/* Original rotating position-name badge */}
+            <div className="mt-7 w-fit rounded-xl bg-indigo-100 px-6 py-3 shadow-lg" style={{ perspective: '600px' }}>
+              <div key={roleIndex} className="role-flip text-xl font-semibold text-indigo-700 sm:text-2xl">
                 {PROFILE.roles[roleIndex]}
-              </span>{' '}
-              based in {PROFILE.location}. One person for your whole online presence:
-              I build it, I promote it, I automate it.
+              </div>
+            </div>
+
+            <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
+              I&apos;m <span className="font-semibold text-ink">{PROFILE.name}</span>, based in{' '}
+              {PROFILE.location}. One person for your whole online presence: I build it,
+              I promote it, I automate it.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
