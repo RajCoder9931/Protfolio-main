@@ -15,9 +15,10 @@ export const PROFILE = {
   whatsappNumber: '919931993138',
   roles: [
     'Full Stack Developer',
-    'Meta & Google Ads Specialist',
-    'AI Chatbot & Automation Builder',
-    'Social Media Manager',
+    'Creative Designer',
+    'Web Developer',
+    'Frontend Developer',
+    'Digital Marketing Expert',
   ],
 };
 
@@ -98,7 +99,7 @@ export const PROJECTS: Project[] = [
     description:
       'A pet-centric social platform with post creation, likes, comments, reporting and real-time chat, plus a pet profile management system.',
     tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
-    repoUrl: 'https://github.com/RajCoder9931/Being-Petz',
+    liveUrl: 'https://beinersfrddg-petz.vercel.app',
   },
   {
     title: 'ERP & Recruitment CRM',
@@ -108,19 +109,22 @@ export const PROJECTS: Project[] = [
     tech: ['React.js', 'Node.js', 'Express.js', 'Python', 'MongoDB', 'VPS'],
   },
   {
-    title: 'Portfolio AI Assistant',
-    tagline: 'The chatbot on this very site',
-    description:
-      'A custom-built assistant that answers questions about my work, collects project enquiries and preferred meeting times, and books confirmed slots with a Google Meet link - replacing the third-party chat widget this site used before.',
-    tech: ['React', 'Vercel Serverless', 'Gemini API', 'Google Calendar'],
-  },
-  {
     title: 'Task Notifier',
     tagline: 'Smart task reminders in the browser',
     description:
       'A web app for task reminders with real-time notifications, subtasks, scheduled alerts and a clean dark interface.',
     tech: ['JavaScript', 'Web Notifications', 'Local Storage'],
+    liveUrl: 'https://tasknotify.netlify.app/',
     repoUrl: 'https://github.com/RajCoder9931/Task-Notifyer',
+  },
+  {
+    title: 'Learn & Earn Quiz',
+    tagline: 'Quiz app with scoring',
+    description:
+      'A responsive quiz application with scoring and random questions.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    liveUrl: 'https://learnandearnquiz.netlify.app/',
+    repoUrl: 'https://github.com/RajCoder9931/Quiz-app',
   },
 ];
 
@@ -218,7 +222,7 @@ export const KNOWLEDGE: QAEntry[] = [
   },
 ];
 
-export const CHAT_SYSTEM_PROMPT = `You are the AI assistant on Ravi Raj Tiwari's personal portfolio website. You answer visitors' questions about Ravi's PROFESSIONAL work only, and help them start a project enquiry or book a meeting with him.
+export const CHAT_SYSTEM_PROMPT = `You are Solo AI, the AI assistant on Ravi Raj Tiwari's personal portfolio website. You answer visitors' questions about Ravi's PROFESSIONAL work only, and help them start a project enquiry or book a meeting with him.
 
 Facts you may use (this is everything you know - do not invent beyond it):
 ${KNOWLEDGE.map((k) => `Q: ${k.question}\nA: ${k.answer}`).join('\n\n')}
