@@ -66,8 +66,7 @@ const Projects = () => {
           <p className="section-eyebrow mb-3">Projects</p>
           <h2 className="section-title">Things I have built</h2>
           <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
-            Real products with real users, not tutorial clones. RankRaja and BillDrop are
-            live right now - click through and try them.
+            RankRaja and BillDrop are my own products. Open either project to explore it.
           </p>
         </div>
 
