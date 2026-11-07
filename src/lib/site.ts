@@ -27,39 +27,50 @@ export const waLink = (text?: string) =>
 
 export interface SkillGroup {
   title: string;
-  blurb: string;
+  blurb?: string;
   items: string[];
 }
 
+// Ravi's own category-wise skills, restored from his original portfolio at his
+// request (22:31 reference screenshots + "mere ko isme ye chahiye").
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    title: 'Web Development',
-    blurb: 'Fast, responsive products from idea to deployment.',
+    title: 'Digital Marketing',
     items: [
-      'React.js', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Bootstrap',
-      'Node.js', 'Express.js', 'REST APIs', 'PHP', 'MongoDB', 'MySQL', 'PostgreSQL',
-      'Prisma', 'Firebase', 'Git & GitHub', 'Vercel', 'Render', 'VPS Deployment',
+      'Meta Ads', 'Facebook Ads', 'Instagram Ads', 'Lead Generation',
+      'Retargeting', 'Audience Targeting', 'Campaign Optimization',
+      'Product Advertising',
     ],
   },
   {
-    title: 'AI Automation & Chatbots',
-    blurb: 'Chatbots and workflows that reply, qualify and book for you.',
+    title: 'Frontend',
     items: [
-      'AI Chatbot Development', 'WATI', 'AiSensy', 'Gallabox',
-      'WhatsApp Automation', 'Workflow Automation', 'AI APIs',
-      'Lead Qualification Bots', 'Meeting & Enquiry Automation',
+      'HTML5', 'CSS3', 'JavaScript', 'React.js', 'Angular', 'Tailwind CSS',
+      'Bootstrap',
     ],
   },
   {
-    title: 'Digital Marketing & Ads',
-    blurb: 'Campaigns that turn attention into leads and sales.',
+    title: 'AI & Automation',
     items: [
-      'Meta Ads', 'Facebook Ads', 'Instagram Ads', 'Google Ads',
-      'Campaign Setup & Management', 'Lead Generation', 'Customer Acquisition',
-      'Audience Research & Targeting', 'Retargeting', 'Campaign Optimization',
-      'Social Media Management', 'Content & Posting Strategy', 'Business Growth',
-      'Meta Business Suite', 'Google Business Profile',
+      'AI APIs', 'AI Automation', 'Chatbot Development', 'WATI', 'AiSensy',
+      'WhatsApp Automation', 'Workflow Automation',
     ],
+  },
+  {
+    title: 'Tools & DevOps',
+    items: ['Git', 'GitHub', 'Vercel', 'Render', 'VPS', 'Chrome Extension API'],
+  },
+  {
+    title: 'Backend',
+    items: ['Node.js', 'Express.js', 'PHP', 'Python', 'REST APIs'],
+  },
+  {
+    title: 'Database',
+    items: ['MongoDB', 'MySQL', 'Firebase', 'PostgreSQL'],
+  },
+  {
+    title: 'CMS & Web',
+    items: ['WordPress', 'Elementor', 'Website Development', 'Website Optimization'],
   },
 ];
 
