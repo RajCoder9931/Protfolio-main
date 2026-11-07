@@ -37,15 +37,15 @@ const experiences: ExperienceItem[] = [
   },
   {
     role: 'Independent Full Stack Developer',
-    company: 'Self-Employed / Personal Products',
-    date: 'Jun 2026 – Present',
+    company: 'Personal Products',
+    date: '',
     description:
       'Building and running my own products - RankRaja (AI SEO audit SaaS) and BillDrop (WhatsApp billing app) - alongside client work.',
     points: [
       'Designed, built and deployed RankRaja: AI SEO audits, user auth, dashboards and a free tools suite.',
       'Built BillDrop: barcode scanning billing with PDF bills sent on WhatsApp.',
       'Integrated AI APIs for content generation, automation and workflow optimization.',
-      'Managed deployment, analytics, SEO and iteration of live products used by real visitors.',
+      'Managed deployment, SEO and iteration of the products.',
     ],
     tech: ['Next.js', 'React.js', 'Node.js', 'Supabase', 'Gemini API', 'Vercel', 'Git'],
   },
