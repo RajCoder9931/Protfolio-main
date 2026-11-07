@@ -78,7 +78,7 @@ const ChatWidget = () => {
       setMessages((m) => [
         ...m,
         { role: 'user', content: trimmed },
-        { role: 'assistant', content: 'Great - fill this quick form and I will check Ravi\'s calendar. If the slot is free, your meeting and Meet link are created right away.' },
+        { role: 'assistant', content: 'Meeting booking is being connected. For now, please contact Ravi by email or WhatsApp with your preferred time and topic.' },
       ]);
       setView('booking');
       setInput('');
@@ -169,7 +169,7 @@ const ChatWidget = () => {
               </span>
               <div>
                 <p className="text-sm font-semibold text-paper">{PROFILE.shortName}'s Assistant</p>
-                <p className="text-[11px] text-paper/60">Instant answers · Meeting booking</p>
+                <p className="text-[11px] text-paper/60">Project enquiries · Meeting requests</p>
               </div>
             </div>
             <button onClick={() => setOpen(false)} className="rounded-lg p-1.5 text-paper/70 hover:text-paper" aria-label="Close chat">
@@ -293,7 +293,7 @@ const ChatWidget = () => {
               ) : (
                 <form onSubmit={submitBooking} className="space-y-3.5">
                   <p className="text-sm leading-relaxed text-ink-muted">
-                    Pick your preferred time. If the slot is free, it books automatically and you get a Google Meet link right away.
+                    Meeting booking is being connected. For now, email or WhatsApp Ravi directly with your preferred time and topic. This preview does not confirm a meeting.
                   </p>
                   <input type="text" name="website" value={booking.website} onChange={(e) => setBooking({ ...booking, website: e.target.value })} className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                   <div>
