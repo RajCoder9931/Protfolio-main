@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { PROFILE } from '../lib/site';
 
 const NAV_ITEMS = [
+  { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
+  { id: 'achievements', label: 'Achievements' },
+  { id: 'education', label: 'Education' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -44,7 +46,7 @@ const Header = () => {
             R
           </span>
           <span className={`font-serif text-lg font-semibold tracking-tight transition-colors text-ink`}>
-            {PROFILE.name}
+            <span className="text-indigo-600">Ravi</span> Raj Tiwari
           </span>
         </a>
 
