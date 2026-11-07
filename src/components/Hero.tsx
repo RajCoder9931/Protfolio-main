@@ -1,119 +1,229 @@
-import  { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import profileImage from '../assets/picofme.png';
 import resumePDF from '../assets/resume.pdf';
+import { PROFILE, waLink } from '../lib/site';
 
-const roles = [
-  "Full Stack Developer",
-  "Creative Designer",
-  "Web Developer",
-  "Frontend Developer",
-  "Digital Marketing Expert"
-];
-
-const handleResumeViewDownload = () => {
-  const resumeUrl = resumePDF;
-  window.open(resumeUrl, '_blank');
-  const link = document.createElement('a');
-  link.href = resumeUrl;
-  link.download = 'Ravi-Raj-Tiwari-Resume.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+const ICON_PROPS = {
+  width: 20,
+  height: 20,
+  viewBox: '0 0 24 24',
+  fill: 'none',
+  stroke: 'currentColor',
+  strokeWidth: 2,
+  strokeLinecap: 'round' as const,
+  strokeLinejoin: 'round' as const,
 };
 
+const SERVICES = [
+  {
+    title: 'Web Development',
+    body: 'Business websites, web apps and SaaS products in React/Next.js - fast, responsive, deployed.',
+    icon: (
+      <svg {...ICON_PROPS}>
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Meta Ads',
+    body: 'Campaign setup, audience targeting and retargeting focused on lead quality.',
+    icon: (
+      <svg {...ICON_PROPS}>
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="6" />
+        <circle cx="12" cy="12" r="2" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Google Ads',
+    body: 'Search and display campaign setup with ongoing management and optimization.',
+    icon: (
+      <svg {...ICON_PROPS}>
+        <path d="M3 3v18h18" />
+        <path d="M18 17V9" />
+        <path d="M13 17V5" />
+        <path d="M8 17v-3" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Social Media Management',
+    body: 'End-to-end handling of your social profiles, from content to growth.',
+    icon: (
+      <svg {...ICON_PROPS}>
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Content & Posting Strategy',
+    body: 'Content calendars and posting plans that keep your brand consistent.',
+    icon: (
+      <svg {...ICON_PROPS}>
+        <rect width="18" height="18" x="3" y="4" rx="2" />
+        <path d="M16 2v4" />
+        <path d="M8 2v4" />
+        <path d="M3 10h18" />
+      </svg>
+    ),
+  },
+  {
+    title: 'AI Chatbots & Automation',
+    body: 'Chatbots and workflows that reply, qualify leads and book meetings.',
+    icon: (
+      <svg {...ICON_PROPS}>
+        <path d="M12 8V4H8" />
+        <rect width="16" height="12" x="4" y="8" rx="2" />
+        <path d="M2 14h2" />
+        <path d="M20 14h2" />
+        <path d="M15 13v2" />
+        <path d="M9 13v2" />
+      </svg>
+    ),
+  },
+  {
+    title: 'WhatsApp Automation',
+    body: 'Business automation and campaigns on WATI, AiSensy and Gallabox.',
+    icon: (
+      <svg {...ICON_PROPS}>
+        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Lead Generation & Growth',
+    body: 'Lead funnels from ads to WhatsApp that turn attention into customers.',
+    icon: (
+      <svg {...ICON_PROPS}>
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+        <polyline points="16 7 22 7 22 13" />
+      </svg>
+    ),
+  },
+];
+
 const Hero = () => {
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [flipping, setFlipping] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFlipping(true); // Start flip
+      setVisible(false);
       setTimeout(() => {
-        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-        setFlipping(false); // End flip
-      }, 600); // must match animation duration
-    }, 4000);
-
+        setRoleIndex((i) => (i + 1) % PROFILE.roles.length);
+        setVisible(true);
+      }, 300);
+    }, 3200);
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const scrollToSection = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="home" className="min-h-screen flex items-center py-20 bg-gradient-to-br from-indigo-50 to-white">
-      <div className="container mx-auto px-4 py-12 md:py-20">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <p className="text-indigo-600 font-medium mb-2">Hello, I'm</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Ravi Raj Tiwari
-            </h1>
-
-            {/* 3D Flip Effect */}
-            <div className="w-fit bg-indigo-100 px-6 py-3 rounded-lg shadow-lg perspective mb-6">
-              <div className={`transition-transform duration-500 transform-style preserve-3d ${flipping ? 'rotateX-180' : ''}`}>
-                <div className="front face text-xl md:text-2xl lg:text-3xl text-indigo-700 font-semibold">
-                  {roles[currentRoleIndex]}
-                </div>
-              </div>
-            </div>
-
-            <p className="text-slate-600 text-lg mb-8 max-w-lg">
-              I build exceptional digital experiences with modern technologies.
-              Passionate about creating robust, scalable applications that solve
-              real-world problems.
+    <section id="home" className="relative overflow-hidden bg-white text-ink">
+      <div className="section-shell relative pb-14 pt-28 sm:pt-36">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
+              Available for freelance projects
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <button onClick={() => scrollToSection('projects')} className="px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors duration-300">
-                View Projects
+            <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-[4.4rem]">
+              Websites, ads &amp; chatbots that{' '}
+              <em className="font-medium italic text-accent">grow your business.</em>
+            </h1>
+
+            <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
+              I&apos;m <span className="font-semibold text-ink">{PROFILE.name}</span> -{' '}
+              <span
+                className={`font-medium text-accent transition-opacity duration-300 ${
+                  visible ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                {PROFILE.roles[roleIndex]}
+              </span>{' '}
+              based in {PROFILE.location}. One person for your whole online presence:
+              I build it, I promote it, I automate it.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <button className="btn-primary" onClick={() => scrollToSection('contact')}>
+                Start a project
               </button>
-              <button onClick={handleResumeViewDownload} className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-md hover:bg-indigo-50 transition-colors duration-300">
-                Download Resume
+              <button
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/20 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-paper"
+                onClick={() => scrollToSection('projects')}
+              >
+                See my work
               </button>
+              <button
+                onClick={() => window.open(resumePDF, '_blank')}
+                className="text-sm font-semibold text-muted underline decoration-line underline-offset-4 transition-colors hover:text-ink"
+              >
+                Download resume
+              </button>
+            </div>
+
+            <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
+              <a href={PROFILE.github} target="_blank" rel="noreferrer" className="font-medium hover:text-ink">GitHub</a>
+              <a href={PROFILE.linkedin} target="_blank" rel="noreferrer" className="font-medium hover:text-ink">LinkedIn</a>
+              <a href={PROFILE.instagram} target="_blank" rel="noreferrer" className="font-medium hover:text-ink">Instagram {PROFILE.instagramHandle}</a>
+              <a href={waLink('Hi Ravi, I saw your portfolio and want to discuss a project.')} target="_blank" rel="noreferrer" className="font-medium hover:text-ink">WhatsApp</a>
             </div>
           </div>
 
-          <div className="md:w-1/2 flex justify-center">
+          {/* Original photo treatment: circular framed photo, like the first portfolio */}
+          <div className="relative mx-auto flex w-full max-w-xs justify-center sm:max-w-sm">
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                <img src={profileImage} alt="Ravi Raj Tiwari - Full Stack Developer" className="w-full h-full object-cover" />
+              <div className="h-64 w-64 overflow-hidden rounded-full border-4 border-white shadow-lg md:h-80 md:w-80">
+                <img
+                  src={profileImage}
+                  alt={PROFILE.name}
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-full shadow-lg">
-                <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
-                  23+
-                </div>
+              <div className="absolute -bottom-2 left-1/2 w-max -translate-x-1/2 rounded-full border border-line bg-white px-5 py-2 text-xs font-semibold tracking-wide text-ink shadow-pop">
+                {PROFILE.tagline}
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Flip Animation CSS */}
-      <style>{`
-        .perspective {
-          perspective: 1000px;
-        }
-        .transform-style {
-          transform-style: preserve-3d;
-        }
-        .rotateX-180 {
-          transform: rotateX(180deg);
-        }
-        .face {
-          backface-visibility: hidden;
-        }
-      `}</style>
+        <div className="marquee mt-16 overflow-hidden" aria-label="Services">
+          <div className="marquee-track flex w-max gap-4">
+            {[...SERVICES, ...SERVICES].map((s, i) => {
+              const dup = i >= SERVICES.length;
+              return (
+                <button
+                  key={`${s.title}-${i}`}
+                  onClick={() => scrollToSection('skills')}
+                  aria-hidden={dup}
+                  tabIndex={dup ? -1 : 0}
+                  className={`group w-64 shrink-0 rounded-2xl border border-line bg-paper p-5 text-left transition-colors hover:border-accent/40 hover:bg-accent-soft sm:w-72 ${dup ? 'marquee-dup' : ''}`}
+                >
+                  <p className="flex items-center justify-between text-sm font-semibold uppercase tracking-wider text-muted">
+                    <span>0{(i % SERVICES.length) + 1}</span>
+                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-soft text-accent transition-transform group-hover:scale-105">
+                      {s.icon}
+                    </span>
+                  </p>
+                  <h3 className="mt-3 font-serif text-xl font-semibold text-ink">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{s.body}</p>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
 
 export default Hero;
-
-
- 
