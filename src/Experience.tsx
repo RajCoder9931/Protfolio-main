@@ -36,20 +36,6 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
-    role: 'Independent Full Stack Developer',
-    company: 'Personal Products',
-    date: '',
-    description:
-      'Building and running my own products - RankRaja (AI SEO audit SaaS) and BillDrop (WhatsApp billing app) - alongside client work.',
-    points: [
-      'Designed, built and deployed RankRaja: AI SEO audits, user auth, dashboards and a free tools suite.',
-      'Built BillDrop: barcode scanning billing with PDF bills sent on WhatsApp.',
-      'Integrated AI APIs for content generation, automation and workflow optimization.',
-      'Managed deployment, SEO and iteration of the products.',
-    ],
-    tech: ['Next.js', 'React.js', 'Node.js', 'Supabase', 'Gemini API', 'Vercel', 'Git'],
-  },
-  {
     role: 'Full Stack Developer & Digital Marketing',
     company: 'Inavsys IT Consultant (Navsant Group)',
     logo: inavsysLogo,
@@ -117,6 +103,20 @@ const experiences: ExperienceItem[] = [
       'Product Ads', 'Retargeting', 'Audience Targeting', 'Campaign Optimization',
     ],
   },
+  {
+    role: 'Independent Full Stack Developer',
+    company: 'Personal Products',
+    date: '',
+    description:
+      'Building and running my own products - RankRaja (AI SEO audit SaaS) and BillDrop (WhatsApp billing app) - alongside client work.',
+    points: [
+      'Designed, built and deployed RankRaja: AI SEO audits, user auth, dashboards and a free tools suite.',
+      'Built BillDrop: barcode scanning billing with PDF bills sent on WhatsApp.',
+      'Integrated AI APIs for content generation, automation and workflow optimization.',
+      'Managed deployment, SEO and iteration of the products.',
+    ],
+    tech: ['Next.js', 'React.js', 'Node.js', 'Supabase', 'Gemini API', 'Vercel', 'Git'],
+  },
 ];
 
 const Experience = () => {
@@ -130,14 +130,14 @@ const Experience = () => {
 
         <div className="space-y-5">
           {experiences.map((exp, index) => (
-            <article key={`${exp.company}-${index}`} className="card p-6 transition-shadow hover:shadow-pop sm:p-8">
+            <article key={`${exp.company}-${index}`} className="card-glass p-6 sm:p-8">
               <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
                 {exp.logo ? (
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-line bg-white p-1.5 sm:h-16 sm:w-16">
+                  <div className="flex h-16 w-32 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-line bg-white p-2.5 shadow-card sm:h-20 sm:w-40">
                     <img src={exp.logo} alt={`${exp.company} logo`} className="h-full w-full object-contain" loading="lazy" />
                   </div>
                 ) : (
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-accent-soft font-serif text-xl font-semibold text-accent sm:h-16 sm:w-16">
+                  <div className="icon-tile h-20 w-20 font-serif text-2xl font-semibold sm:h-24 sm:w-24">
                     {exp.company.charAt(0)}
                   </div>
                 )}
@@ -146,11 +146,15 @@ const Experience = () => {
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                     <div>
                       <h3 className="text-lg font-semibold leading-snug text-ink sm:text-xl">{exp.role}</h3>
-                      <p className="mt-0.5 text-sm font-medium text-ink-muted">{exp.company}</p>
+                      {!exp.logo && (
+                        <p className="mt-0.5 text-sm font-medium text-ink-muted">{exp.company}</p>
+                      )}
                     </div>
-                    <span className="w-fit shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold text-accent">
-                      {exp.date}
-                    </span>
+                    {exp.date && (
+                      <span className="w-fit shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold text-accent">
+                        {exp.date}
+                      </span>
+                    )}
                   </div>
 
                   <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">{exp.description}</p>
