@@ -10,8 +10,8 @@ const Contact = () => {
             <h2 className="section-title">Let’s build something for your business</h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-ink-muted sm:text-lg">
               The fastest way is the chat assistant in the bottom-right corner - tell it what
-              you need, pick a preferred meeting time, and it books the slot on my calendar
-              with a Google Meet link. Or reach me directly:
+              you need and ask about services or projects. Meeting booking is being connected.
+              For a meeting request, email or WhatsApp me directly:
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -56,8 +56,8 @@ const Contact = () => {
             <ol className="mt-6 space-y-5">
               {[
                 ['Tell me your goal', 'A website, more leads from ads, social media growth, or a chatbot - in your own words.'],
-                ['Get a clear plan', 'I reply with an approach, timeline and a fixed quote. No vague estimates.'],
-                ['See progress weekly', 'Regular previews and updates until it is live and working for you.'],
+                ['Get a clear plan', 'We discuss the approach, scope, timeline and price before work starts.'],
+                ['Review the work', 'Check previews and share feedback as the project takes shape.'],
               ].map(([title, body], i) => (
                 <li key={i} className="flex gap-4">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent font-serif text-sm font-semibold text-paper">
@@ -74,7 +74,7 @@ const Contact = () => {
               className="btn-primary mt-8 w-full"
               onClick={() => window.dispatchEvent(new CustomEvent('open-portfolio-chat', { detail: { booking: true } }))}
             >
-              Book a meeting in the chat
+              Ask about a project
             </button>
           </div>
         </div>
