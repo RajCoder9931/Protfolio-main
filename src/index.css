@@ -116,3 +116,40 @@ body {
     display: none;
   }
 }
+
+/* Premium glass card */
+.card-glass {
+  @apply relative rounded-2xl border border-white/70 bg-white/75 shadow-card backdrop-blur-xl transition-all duration-300;
+}
+
+.card-glass:hover {
+  @apply -translate-y-1 shadow-pop;
+}
+
+/* Gradient icon tile */
+.icon-tile {
+  @apply flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent-dark text-paper shadow-card;
+}
+
+/* Hero rotating role badge (original flip style) */
+@keyframes role-flip-in {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.role-flip {
+  animation: role-flip-in 0.5s ease both;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .role-flip {
+    animation: none;
+  }
+  }
