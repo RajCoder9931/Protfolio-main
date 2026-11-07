@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PROFILE, waLink } from '../lib/site';
+import { SOLO_AVATAR } from '../assets/soloAvatar';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -150,12 +151,10 @@ const ChatWidget = () => {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-paper shadow-pop transition-transform hover:scale-105 sm:bottom-6 sm:right-6"
+          className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-accent shadow-pop transition-transform hover:scale-105 sm:bottom-6 sm:right-6"
           aria-label="Chat with Ravi's assistant"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4-.84L3 20l1.34-3.35A7.7 7.7 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
+          <img src={SOLO_AVATAR} alt="Solo AI" className="h-full w-full object-cover" />
         </button>
       )}
 
@@ -163,17 +162,9 @@ const ChatWidget = () => {
         <div className="fixed inset-x-3 bottom-3 top-3 z-50 flex flex-col overflow-hidden rounded-3xl border border-white/60 bg-white/80 shadow-pop backdrop-blur-xl sm:inset-x-auto sm:bottom-6 sm:right-6 sm:top-auto sm:h-[min(36rem,calc(100dvh-3rem))] sm:w-[24rem]">
           <div className="flex items-center justify-between border-b border-white/20 bg-gradient-to-r from-accent-dark to-accent px-4 py-3">
             <div className="flex items-center gap-2.5">
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-paper text-accent">
-                {/* Interim Solo AI avatar - user is sending a custom cute icon to replace this */}
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 8V4H8" />
-                  <rect width="16" height="12" x="4" y="8" rx="2" />
-                  <path d="M2 14h2" />
-                  <path d="M20 14h2" />
-                  <path d="M15 13v2" />
-                  <path d="M9 13v2" />
-                </svg>
-                <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-accent-dark bg-green-400" />
+              <span className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-paper">
+                <img src={SOLO_AVATAR} alt="" className="h-full w-full object-cover" />
+                <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-accent-dark bg-indigo-300" />
               </span>
               <div>
                 <p className="text-sm font-semibold text-paper">Solo AI</p>
