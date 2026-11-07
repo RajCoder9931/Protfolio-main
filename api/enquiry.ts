@@ -1,29 +1,3 @@
-// Vercel serverless function: POST /api/enquiry
-// Automatic meeting booking for Ravi's portfolio visitors.
-//
-// Flow (per owner's decision: fully automatic, client proposes the time):
-//  1. Validate + spam-guard the request.
-//  2. Check the preferred time falls inside Ravi's bookable windows (IST),
-//     derived from his daily routine (never during office 09:30-19:00,
-//     project blocks, reel time or family time).
-//  3. If Google Calendar env is configured: free/busy check, then create a
-//     REAL calendar event + Google Meet link -> status "booked".
-//     On conflict -> return alternative free slots, nothing booked.
-//  4. If Calendar is not configured -> status "pending": Ravi is emailed and
-//     confirms himself. No Meet link is promised until a real event exists.
-//  5. Ravi always gets an email with the details (booked or pending).
-//
-// Env:
-//   RESEND_API_KEY, NOTIFY_EMAIL            -> notification email (required for email)
-//   NOTIFY_FROM                             -> verified sender identity (never Ravi's Gmail as app sender)
-//   GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN,
-//   GOOGLE_CALENDAR_ID (default 'primary')  -> real booking + Meet links
-//   BOOKING_DURATION_MIN (default 30)
-//   BOOKABLE_WINDOWS (REQUIRED for auto-booking; unset = request/pending mode only)
-//     Format: comma-separated "Day HH:MM-HH:MM" in Asia/Kolkata, e.g.
-//     'Sat 10:00-12:00,Sun 15:00-18:00'. Auto-booking stays OFF until the owner
-//     sets the hours he actually wants the bot to book.
-
 export const config = { runtime: 'nodejs' };
 
 const TZ = 'Asia/Kolkata';
@@ -179,6 +153,10 @@ export default async function handler(req: any, res: any) {
     return res.status(429).json({ ok: false, message: 'Too many requests. Please use the WhatsApp option instead.' });
   }
 
+  if (!process.env.RESEND_API_KEY && !process.env.GOOGLE_REFRESH_TOKEN) {
+    return res.status(503).json({ ok: false, message: 'Meeting booking is not connected yet. Please contact Ravi directly by email or WhatsApp.' });
+  }
+
   if (req.body?.website) return res.status(200).json({ ok: true, status: 'pending' }); // honeypot
 
   const name = sanitize(req.body?.name, 80);
@@ -252,5 +230,8 @@ export default async function handler(req: any, res: any) {
     emailHtml
   );
 
+  if (status !== 'booked' && !emailSent) {
+    return res.status(503).json({ ok: false, message: 'Your request was not delivered. Please contact Ravi directly by email or WhatsApp.' });
+  }
   return res.status(200).json({ ok: true, status, meetLink, emailSent });
 }
