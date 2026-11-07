@@ -38,7 +38,7 @@ const toLocalInputValue = (iso: string) => {
 
 const GREETING: ChatMessage = {
   role: 'assistant',
-  content: `Hi! I'm ${PROFILE.shortName}'s assistant. Ask me about his services - websites, Meta & Google Ads, social media, WhatsApp chatbots - or tap "Book a meeting" and I'll set it up with him.`,
+  content: `Hi! I'm Solo AI, ${PROFILE.shortName}'s assistant. Ask me about his services - websites, Meta & Google Ads, social media, WhatsApp chatbots - or tap "Book a meeting" and I'll set it up with him.`,
 };
 
 const QUICK_REPLIES = ['What services do you offer?', 'Show me his projects', 'Book a meeting'];
@@ -160,16 +160,24 @@ const ChatWidget = () => {
       )}
 
       {open && (
-        <div className="fixed inset-x-3 bottom-3 top-3 z-50 flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-pop sm:inset-x-auto sm:bottom-6 sm:right-6 sm:top-auto sm:h-[min(36rem,calc(100dvh-3rem))] sm:w-[24rem]">
-          <div className="flex items-center justify-between border-b border-line bg-ink px-4 py-3">
+        <div className="fixed inset-x-3 bottom-3 top-3 z-50 flex flex-col overflow-hidden rounded-3xl border border-white/60 bg-white/80 shadow-pop backdrop-blur-xl sm:inset-x-auto sm:bottom-6 sm:right-6 sm:top-auto sm:h-[min(36rem,calc(100dvh-3rem))] sm:w-[24rem]">
+          <div className="flex items-center justify-between border-b border-white/20 bg-gradient-to-r from-accent-dark to-accent px-4 py-3">
             <div className="flex items-center gap-2.5">
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-accent font-serif text-base font-semibold text-paper">
-                R
-                <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-ink bg-green-400" />
+              <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-paper text-accent">
+                {/* Interim Solo AI avatar - user is sending a custom cute icon to replace this */}
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 8V4H8" />
+                  <rect width="16" height="12" x="4" y="8" rx="2" />
+                  <path d="M2 14h2" />
+                  <path d="M20 14h2" />
+                  <path d="M15 13v2" />
+                  <path d="M9 13v2" />
+                </svg>
+                <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-accent-dark bg-green-400" />
               </span>
               <div>
-                <p className="text-sm font-semibold text-paper">{PROFILE.shortName}'s Assistant</p>
-                <p className="text-[11px] text-paper/60">Project enquiries · Meeting requests</p>
+                <p className="text-sm font-semibold text-paper">Solo AI</p>
+                <p className="text-[11px] text-paper/70">{PROFILE.shortName}'s assistant · Enquiries & meetings</p>
               </div>
             </div>
             <button onClick={() => setOpen(false)} className="rounded-lg p-1.5 text-paper/70 hover:text-paper" aria-label="Close chat">
