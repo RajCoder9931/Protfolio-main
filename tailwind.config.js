@@ -14,9 +14,9 @@ export default {
           muted: '#6E6A61'
         },
         accent: {
-          DEFAULT: '#14532D',
-          dark: '#0C3B20',
-          soft: '#E3EDE5'
+          DEFAULT: '#4F46E5',
+          dark: '#4338CA',
+          soft: '#E0E7FF'
         },
         line: '#E5E0D5'
       },
