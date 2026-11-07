@@ -1,31 +1,44 @@
+// Achievement entries restored from Ravi's original portfolio at his explicit request.
 const achievements = [
   {
     id: 1,
-    title: '3rd Prize - Web-Wrangling Wild West Hackathon',
-    organization: 'PCTE, Ludhiana',
-    date: 'Mar 2025',
-    description: 'Secured 3rd prize for web development and problem-solving under competitive conditions.',
+    title: 'Web - Wrangling Wild West',
+    organization: 'PCTE University Ludhiyana',
+    date: '2025',
+    description: 'Validated expertise in designing distributed systems on AWS.',
+    icon: '🏆',
   },
   {
     id: 2,
-    title: '2nd Prize - Web Wizard Competition',
-    organization: 'Tech-Pragya 2025, GNA University',
-    date: '2025',
-    description: 'Won 2nd position for frontend and web development skills.',
-  },
-  {
-    id: 3,
     title: 'Python + Django Seminar',
     organization: 'Cadd Cam Services',
     date: '2024',
-    description: 'Completed seminar training on Python and Django web development.',
+    description: 'Demonstrated ability to design, build, and manage applications on Google Cloud.',
+    icon: '🏅',
+  },
+  {
+    id: 3,
+    title: 'Open Source Contributor Award',
+    organization: 'GitHub',
+    date: '2024',
+    description: 'Recognized for significant contributions to open source projects.',
+    icon: '🌟',
   },
   {
     id: 4,
-    title: 'National Quiz - Unity in Diversity 2024',
-    organization: 'National Commission for Minorities (NCM), Govt. of India',
+    title: 'National Quiz Unity in Diversity 2024',
+    organization: 'Indian Gov National Commission for Minorities (NCM)',
     date: '2024',
-    description: 'Participated in the national-level Unity in Diversity quiz.',
+    description: 'First place for developing an innovative healthcare solution.',
+    icon: '🥇',
+  },
+  {
+    id: 5,
+    title: 'Tech Pragya (Web wizad)',
+    organization: 'Gna University Phagwara',
+    date: '2025',
+    description: 'I secured 2nd position in the Web Wizard competition at Tech Pragya.',
+    icon: '🥈',
   },
 ];
 
@@ -38,17 +51,30 @@ const Achievements = () => {
           <h2 className="section-title">Recognition</h2>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2">
-          {achievements.map((a) => (
-            <div key={a.id} className="card p-6 sm:p-7">
-              <div className="flex items-center justify-between gap-4">
-                <h3 className="text-base font-semibold leading-snug text-ink sm:text-lg">{a.title}</h3>
-                <span className="shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold text-accent">
-                  {a.date}
-                </span>
+        <div className="mx-auto max-w-4xl">
+          {achievements.map((a, index) => (
+            <div
+              key={a.id}
+              className={`mb-10 flex flex-col items-start gap-4 md:items-center ${
+                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+              }`}
+            >
+              <div
+                className={`icon-tile h-16 w-16 rounded-full text-2xl ${
+                  index % 2 === 0 ? 'md:order-1' : 'md:order-2'
+                }`}
+              >
+                <span aria-hidden>{a.icon}</span>
               </div>
-              <p className="mt-1.5 text-sm font-medium text-ink-muted">{a.organization}</p>
-              <p className="mt-3 text-sm leading-relaxed text-ink-muted">{a.description}</p>
+              <div className={`flex-1 ${index % 2 === 0 ? 'md:order-0 md:pr-8 md:text-right' : 'md:order-1 md:pl-8 md:text-left'}`}>
+                <div className="card-glass p-6">
+                  <h3 className="text-xl font-semibold text-ink">{a.title}</h3>
+                  <p className="mt-1 font-medium text-accent">
+                    {a.organization} · {a.date}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{a.description}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
