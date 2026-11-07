@@ -90,7 +90,7 @@ const Projects = () => {
           <p className="section-eyebrow mb-3">Projects</p>
           <h2 className="section-title">Things I have built</h2>
           <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
-            RankRaja and BillDrop are my own products. Open any project to explore it live.
+            RankRaja and BillDrop are my own products. Live links and source code are included where available.
           </p>
         </div>
 
