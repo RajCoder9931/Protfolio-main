@@ -6,12 +6,6 @@ const GROUP_ICONS = [
     <polyline points="16 18 22 12 16 6" />
     <polyline points="8 6 2 12 8 18" />
   </svg>,
-  // Ads & social
-  <svg key="ads" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10" />
-    <circle cx="12" cy="12" r="6" />
-    <circle cx="12" cy="12" r="2" />
-  </svg>,
   // AI automation
   <svg key="ai" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 8V4H8" />
@@ -20,6 +14,12 @@ const GROUP_ICONS = [
     <path d="M20 14h2" />
     <path d="M15 13v2" />
     <path d="M9 13v2" />
+  </svg>,
+  // Ads & social
+  <svg key="ads" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" />
+    <circle cx="12" cy="12" r="6" />
+    <circle cx="12" cy="12" r="2" />
   </svg>,
 ];
 
@@ -54,7 +54,7 @@ const About = () => {
             <h2 className="section-title">What I can do for you</h2>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid items-start gap-6 lg:grid-cols-3">
             {SKILL_GROUPS.map((group, gi) => (
               <div key={group.title} className="card p-7">
                 <div className="flex items-center justify-between">
