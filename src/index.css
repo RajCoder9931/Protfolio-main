@@ -11,8 +11,8 @@ body {
 }
 
 ::selection {
-  background: #14532d;
-  color: #f7f5f0;
+  background: #4f46e5;
+  color: #ffffff;
 }
 
 .section-eyebrow {
@@ -152,4 +152,4 @@ body {
   .role-flip {
     animation: none;
   }
-  }
+}
