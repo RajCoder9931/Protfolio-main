@@ -28,6 +28,7 @@ export const waLink = (text?: string) =>
 export interface SkillGroup {
   title: string;
   blurb?: string;
+  practice?: string[];
   items: string[];
 }
 
@@ -36,6 +37,8 @@ export interface SkillGroup {
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     title: 'Digital Marketing',
+    blurb: 'Paid campaigns and lead generation for brands, with audience targeting and ongoing performance analysis.',
+    practice: ['India and international client campaigns', 'Product ads, retargeting and campaign optimization'],
     items: [
       'Meta Ads', 'Facebook Ads', 'Instagram Ads', 'Lead Generation',
       'Retargeting', 'Audience Targeting', 'Campaign Optimization',
@@ -44,6 +47,8 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     title: 'Frontend',
+    blurb: 'Responsive interfaces for web apps, admin dashboards and customer-facing products.',
+    practice: ['React interfaces for ERP and recruitment workflows', 'E-commerce screens and mobile-friendly billing flows'],
     items: [
       'HTML5', 'CSS3', 'JavaScript', 'React.js', 'Angular', 'Tailwind CSS',
       'Bootstrap',
@@ -51,6 +56,8 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     title: 'AI & Automation',
+    blurb: 'AI integrations and chatbot workflows that connect useful tools with everyday business tasks.',
+    practice: ['AI SEO guidance in RankRaja', 'Resume screening and WhatsApp chatbot workflows'],
     items: [
       'AI APIs', 'AI Automation', 'Chatbot Development', 'WATI', 'AiSensy',
       'WhatsApp Automation', 'Workflow Automation',
@@ -58,18 +65,26 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     title: 'Tools & DevOps',
+    blurb: 'Version control and deployment across web products, APIs and browser-based tools.',
+    practice: ['Vercel deployments for RankRaja and BillDrop', 'VPS deployment for ERP and recruitment services'],
     items: ['Git', 'GitHub', 'Vercel', 'Render', 'VPS', 'Chrome Extension API'],
   },
   {
     title: 'Backend',
+    blurb: 'API development, authentication and business logic for full-stack applications.',
+    practice: ['Node.js and Express services for social apps', 'Recruitment workflows with Python integration'],
     items: ['Node.js', 'Express.js', 'PHP', 'Python', 'REST APIs'],
   },
   {
     title: 'Database',
+    blurb: 'Database integration for user accounts, application records and full-stack product workflows.',
+    practice: ['MongoDB-backed ERP and recruitment workflows', 'Supabase Postgres for RankRaja account data'],
     items: ['MongoDB', 'MySQL', 'Firebase', 'PostgreSQL'],
   },
   {
     title: 'CMS & Web',
+    blurb: 'Business websites built with WordPress and Elementor, alongside custom web development.',
+    practice: ['Responsive layouts and website customization', 'Website optimization and ongoing client web work'],
     items: ['WordPress', 'Elementor', 'Website Development', 'Website Optimization'],
   },
 ];
