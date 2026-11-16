@@ -194,13 +194,13 @@ export const KNOWLEDGE: QAEntry[] = [
     keywords: ['service', 'offer', 'what do', 'what can', 'help with', 'hire'],
     question: 'What services does Ravi offer?',
     answer:
-      'Three things: (1) Web development - business websites, web apps and SaaS products built with React/Next.js and Node.js. (2) Digital marketing - Meta Ads and Google Ads setup and management, lead generation, social media management and posting strategy to bring customers to your brand. (3) AI automation - WhatsApp chatbots and workflows built with WATI, AiSensy or Gallabox that reply to customers, qualify leads and book meetings automatically. Tell me about your project and I can pass it to Ravi.',
+      "Ravi can help with:\n\n• Web development: websites, web apps and SaaS.\n\n• Digital marketing: Meta/Google Ads, lead generation and social media.\n\n• AI automation: WhatsApp chatbots and business workflows.\n\nWhat would you like to build or improve?",
   },
   {
     keywords: ['chatbot', 'wati', 'aisensy', 'gallabox', 'whatsapp bot', 'automation', 'workflow'],
     question: 'Can Ravi build a chatbot for my business?',
     answer:
-      'Yes. Ravi builds WhatsApp chatbots and automation workflows using WATI, AiSensy and Gallabox, plus custom AI chatbots like the one you are talking to right now. Typical setups: auto-replies to customer messages, lead qualification, product FAQs, and meeting booking with instant notifications to the owner. Share what you want your bot to do and I will forward it to him.',
+      "Ravi builds WhatsApp chatbots and workflows with WATI, AiSensy and Gallabox.\n\n• Customer auto-replies and FAQs\n• Lead qualification\n• Business workflow automation\n\nMeeting booking on this portfolio is not connected yet. Contact Ravi by email or WhatsApp to discuss your setup.",
   },
   {
     keywords: ['ads', 'meta', 'facebook', 'instagram ad', 'google ad', 'marketing', 'leads', 'customers', 'grow'],
@@ -242,13 +242,13 @@ export const KNOWLEDGE: QAEntry[] = [
     keywords: ['price', 'cost', 'charge', 'rate', 'budget', 'quote', 'much'],
     question: 'What does Ravi charge?',
     answer:
-      'Pricing depends on the project - a landing page, a full web app, monthly ads management and a WhatsApp chatbot are all scoped differently. Share your requirement and budget range through the meeting/enquiry option and Ravi will come back with a clear quote.',
+      "Pricing depends on your project scope.\n\nShare your requirements and budget with Ravi by email or WhatsApp for a quote.",
   },
   {
     keywords: ['contact', 'email', 'phone', 'whatsapp', 'reach', 'talk', 'connect', 'urgent'],
     question: 'How do I contact Ravi?',
     answer:
-      'You can book a meeting right here in the chat - I will take your details and preferred time and notify Ravi instantly. If it is urgent, you can message him directly on WhatsApp. He is also reachable by email at tiwariraviraj50@gmail.com and on Instagram @theviralbihari04.',
+      "Contact Ravi directly:\n\n• Email: tiwariraviraj50@gmail.com\n• WhatsApp: use the Contact section.\n\nMeeting booking and automatic notifications are not connected on this portfolio yet.",
   },
   {
     keywords: ['education', 'study', 'degree', 'college', 'bca', 'university'],
@@ -266,7 +266,7 @@ export const KNOWLEDGE: QAEntry[] = [
     keywords: ['freelance', 'available', 'availability', 'open to', 'full-time', 'full time', 'part'],
     question: 'Is Ravi available for work?',
     answer:
-      'Ravi takes on freelance projects - websites, ads management, social media and chatbot automation - alongside his full-time role. Book a meeting through this chat and he will confirm a time that works.',
+      "Ravi takes on freelance web development, digital marketing and chatbot projects.\n\nContact him by email or WhatsApp to check availability. This chat does not confirm a meeting.",
   },
 ];
 
@@ -276,7 +276,7 @@ Facts you may use (this is everything you know - do not invent beyond it):
 ${KNOWLEDGE.map((k) => `Q: ${k.question}\nA: ${k.answer}`).join('\n\n')}
 
 Rules:
-- Be warm, brief and concrete. 2-4 sentences per answer unless the visitor asks for detail.
+- Be warm, brief and concrete. Use short paragraphs and plain-text bullets on separate lines for lists. Keep replies under 90 words unless asked for detail. Do not use markdown headings or bold markers.
 - Only discuss Ravi's professional services, skills, projects and how to work with him. Politely decline anything personal or unrelated.
 - Never invent prices, client names, metrics, results or promises. If asked for a quote, say pricing depends on scope and invite them to book a meeting.
 - When a visitor wants to hire, discuss a project, or talk to Ravi, collect what they need in chat and point them to Ravi's email or WhatsApp from the Contact section. Instant meeting booking in this chat is being connected - never say a meeting is booked or that Ravi was notified. If they say it is urgent, point them to the WhatsApp option in the Contact section.
