@@ -108,7 +108,7 @@ export const PROJECTS: Project[] = [
     title: 'PetParivaar',
     tagline: 'Social media app for pet owners',
     description:
-      'A pet-centric social platform with post creation, likes, comments, reporting and real-time chat, plus a pet profile management system.',
+      'A social platform built around pets and their owners. Members can create posts, like and comment on updates, report content and chat in real time. Pet profiles keep animal details alongside owner profiles. Built with a React interface, Node.js and Express APIs, MongoDB and Firebase for the social experience.',
     tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
     liveUrl: 'https://beinersfrddg-petz.vercel.app',
   },
@@ -116,14 +116,28 @@ export const PROJECTS: Project[] = [
     title: 'ERP & Recruitment CRM',
     tagline: 'Hiring workflows with AI resume screening',
     description:
-      'Internal ERP frontend plus a recruitment CRM with candidate tracking and an AI-based resume screening system, with backend services deployed on a VPS.',
+      'An enterprise project covering internal ERP interfaces and recruitment workflows. The CRM brings candidate tracking, hiring stages and AI-based resume screening into one workflow. React interfaces connect with Node.js, Express and Python services, backed by MongoDB and deployed on a VPS.',
     tech: ['React.js', 'Node.js', 'Express.js', 'Python', 'MongoDB', 'VPS'],
+  },
+  {
+    title: 'Luna E-Commerce Admin',
+    tagline: 'A workspace for store operations',
+    description:
+      'An e-commerce admin interface for managing products, orders and payments with API sync. The project includes catalogue and category management, customer records, coupons, memberships and role management. It brings store-management screens together in one admin workspace. A live demo is not currently available.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'REST APIs'],
+  },
+  {
+    title: 'CRD Placement Mobile App',
+    tagline: 'College placement management on mobile',
+    description:
+      'A React Native mobile application for college placement workflows. Students can apply for jobs with a one-click application flow, while ATS-based resume shortlisting supports candidate selection. The application connects to a Node.js and Express backend with MongoDB and JWT authentication.',
+    tech: ['React Native', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
   },
   {
     title: 'Task Notifier',
     tagline: 'Smart task reminders in the browser',
     description:
-      'A web app for task reminders with real-time notifications, subtasks, scheduled alerts and a clean dark interface.',
+      'A browser-based task reminder app with a dark interface for organising everyday work. Tasks can include subtasks and scheduled alerts, with browser notifications for reminders. JavaScript and local storage support the task workflow without adding a separate desktop application.',
     tech: ['JavaScript', 'Web Notifications', 'Local Storage'],
     liveUrl: 'https://tasknotify.netlify.app/',
     repoUrl: 'https://github.com/RajCoder9931/Task-Notifyer',
@@ -132,7 +146,7 @@ export const PROJECTS: Project[] = [
     title: 'Learn & Earn Quiz',
     tagline: 'Quiz app with scoring',
     description:
-      'A responsive quiz application with scoring and random questions.',
+      'A responsive quiz app built with HTML, CSS and JavaScript. It presents random questions, tracks answers and calculates a score as part of the quiz experience. The interface adapts to smaller screens so the same question-and-answer flow can be used on a phone or a desktop.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://learnandearnquiz.netlify.app/',
     repoUrl: 'https://github.com/RajCoder9931/Quiz-app',
