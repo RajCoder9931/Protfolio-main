@@ -1,10 +1,12 @@
 import { PROJECTS, Project } from '../lib/site';
 import Social from '../assets/Socialmedia.png';
 import Luna from '../assets/Luna.png';
-import { rankrajaShot, billdropShot } from '../assets/projectShots';
+import { rankrajaShot, billdropShot, taskNotifierShot, quizLoginShot } from '../assets/projectShots';
 
 const IMAGES: Record<string, string> = {
   RankRaja: rankrajaShot,
+  'Task Notifier': taskNotifierShot,
+  'Learn & Earn Quiz': quizLoginShot,
   BillDrop: billdropShot,
   PetParivaar: Social,
   'Luna E-Commerce Admin': Luna,
@@ -27,7 +29,7 @@ const ProjectCardView = ({ project, index }: { project: Project; index: number }
         <div className="h-44 shrink-0 overflow-hidden border-b border-line bg-paper">
           <img
             src={image}
-            alt={`${project.title} screenshot`}
+            alt={project.title === 'Learn & Earn Quiz' ? 'Learn & Earn Quiz login screen' : `${project.title} screenshot`}
             className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
             loading="lazy"
           />
