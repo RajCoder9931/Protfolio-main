@@ -82,9 +82,9 @@ const About = () => {
             <h2 className="section-title">My Skills</h2>
           </div>
 
-          <div className="grid items-start gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="skills-grid grid auto-rows-fr items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SKILL_GROUPS.map((group) => (
-              <div key={group.title} className="card-glass p-7">
+              <div key={group.title} className="skill-card card-glass h-full min-w-0 p-7">
                 <div className="flex items-center justify-between">
                   <h3 className="font-serif text-xl font-semibold text-ink">{group.title}</h3>
                   <span className="chip text-xs">{group.items.length} Skills</span>
