@@ -167,8 +167,8 @@ body {
 #experience article li > span:first-child { display: none; }
 #education .grid { align-items: stretch; }
 #education .card-glass { height: 100%; border: 1px solid #e7e5e4; padding: 1.75rem; border-top: 3px solid #4f46e5; }
-#education h3 { min-height: 3.2rem; }
-#education ul { border-top: 1px solid #e7e5e4; padding-top: 1rem; }
+#education h3 { min-height: 0; }
+#education .education-entry ul { border: 0; padding-top: 0; }
 .project-card { border: 1px solid #e7e5e4; }
 .project-heading { min-height: 4.75rem; }
 .project-heading > div { min-width: 0; }
