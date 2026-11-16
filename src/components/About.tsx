@@ -84,17 +84,29 @@ const About = () => {
 
           <div className="skills-grid grid auto-rows-fr items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SKILL_GROUPS.map((group) => (
-              <div key={group.title} className="skill-card card-glass h-full min-w-0 p-7">
+              <div key={group.title} className="skill-card card-glass flex h-full min-w-0 flex-col p-7">
                 <div className="flex items-center justify-between">
                   <h3 className="font-serif text-xl font-semibold text-ink">{group.title}</h3>
                   <span className="chip text-xs">{group.items.length} Skills</span>
                 </div>
+                <p className="mt-4 text-sm leading-relaxed text-ink-muted">{group.blurb}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <span key={item} className="chip">
                       {item}
                     </span>
                   ))}
+                </div>
+                <div className="mt-6">
+                  <p className="border-t border-line pt-4 text-xs font-semibold uppercase tracking-wider text-accent">In practice</p>
+                  <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ink-muted">
+                    {group.practice?.map((detail) => (
+                      <li key={detail} className="flex gap-2">
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
