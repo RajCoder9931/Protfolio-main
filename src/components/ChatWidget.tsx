@@ -161,7 +161,7 @@ const ChatWidget = () => {
       )}
 
       {open && (
-        <div className="fixed inset-x-3 bottom-3 top-3 z-50 flex flex-col overflow-hidden rounded-3xl border border-white/60 bg-white/80 shadow-pop backdrop-blur-xl sm:inset-x-auto sm:bottom-6 sm:right-6 sm:top-auto sm:h-[min(36rem,calc(100dvh-3rem))] sm:w-[24rem]">
+        <div className="fixed inset-x-3 bottom-3 top-3 z-50 flex flex-col overflow-hidden rounded-3xl border border-white/60 bg-white/80 shadow-pop backdrop-blur-xl sm:inset-x-auto sm:bottom-6 sm:right-6 sm:top-auto sm:h-[min(40rem,calc(100dvh-3rem))] sm:w-[24rem]">
           <div className="flex items-center justify-between border-b border-white/20 bg-gradient-to-r from-accent-dark to-accent px-4 py-3">
             <div className="flex items-center gap-2.5">
               <span className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-paper">
@@ -201,7 +201,7 @@ const ChatWidget = () => {
                 {messages.map((m, i) => (
                   <div key={i} className={`chat-msg flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div
-                      className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+                      className={`max-w-[95%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
                         m.role === 'user'
                           ? 'rounded-br-md bg-accent text-paper'
                           : 'rounded-bl-md border border-line bg-white text-ink'
