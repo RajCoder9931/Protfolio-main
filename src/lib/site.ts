@@ -159,12 +159,20 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Learn & Earn Quiz',
-    tagline: 'Quiz app with scoring',
+    tagline: 'Quiz app with scoring · login preview',
     description:
       'A responsive quiz app built with HTML, CSS and JavaScript. It presents random questions, tracks answers and calculates a score as part of the quiz experience. The interface adapts to smaller screens so the same question-and-answer flow can be used on a phone or a desktop.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://learnandearnquiz.netlify.app/',
     repoUrl: 'https://github.com/RajCoder9931/Quiz-app',
+  },
+  {
+    title: 'MERN User Manager',
+    tagline: 'Full-stack user record management',
+    description:
+      'A MERN CRUD application for creating, viewing, editing and deleting user records. The React interface includes a record list and dedicated add/edit screens. Express routes connect those actions to a Node.js backend and MongoDB models. Source code is available for this project; a live demo has not been verified.',
+    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
+    repoUrl: 'https://github.com/RajCoder9931/Crud-App--Using-React--',
   },
 ];
 
