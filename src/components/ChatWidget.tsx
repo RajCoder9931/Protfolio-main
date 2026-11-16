@@ -39,7 +39,9 @@ const toLocalInputValue = (iso: string) => {
 
 const GREETING: ChatMessage = {
   role: 'assistant',
-  content: `Hi! I'm Solo AI, ${PROFILE.shortName}'s assistant. Ask me anything about his services - websites, Meta & Google Ads, social media, WhatsApp chatbots. For a meeting, email or WhatsApp him directly for now - instant booking here is being connected.`,
+  content: `Hello, I'm Solo AI, ${PROFILE.shortName}'s portfolio assistant. I can help with his services, projects and experience.
+
+How can I help you today?`,
 };
 
 const QUICK_REPLIES = ['What services do you offer?', 'Show me his projects', 'Book a meeting'];
