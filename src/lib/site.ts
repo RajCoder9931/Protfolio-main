@@ -188,13 +188,13 @@ export const KNOWLEDGE: QAEntry[] = [
     keywords: ['who', 'about', 'ravi', 'introduce', 'yourself'],
     question: 'Who is Ravi Raj Tiwari?',
     answer:
-      'Ravi Raj Tiwari is a Full Stack Developer and Digital Marketer based in Delhi, India. He builds web products (his own SaaS RankRaja and the BillDrop billing app), and he runs Meta Ads and Google Ads campaigns, social media, and AI chatbot automation for businesses. He currently works as a Web Developer & Digital Marketing professional at Agarwal Taxcon.',
+      "Ravi Raj Tiwari is a Delhi-based Full Stack Developer and Digital Marketer. His work spans web applications, paid advertising and chatbot automation.\n\nHis own products include RankRaja, an AI SEO audit platform, and BillDrop, a billing application.",
   },
   {
     keywords: ['service', 'offer', 'what do', 'what can', 'help with', 'hire'],
     question: 'What services does Ravi offer?',
     answer:
-      "Ravi can help with:\n\n• Web development: websites, web apps and SaaS.\n\n• Digital marketing: Meta/Google Ads, lead generation and social media.\n\n• AI automation: WhatsApp chatbots and business workflows.\n\nWhat would you like to build or improve?",
+      "Ravi offers three core services:\n\n• Web development: business websites, web applications and SaaS products.\n\n• Digital marketing: Meta and Google Ads, lead generation and social media management.\n\n• AI automation: WhatsApp chatbots and business workflows.\n\nWhich service would you like to discuss?",
   },
   {
     keywords: ['chatbot', 'wati', 'aisensy', 'gallabox', 'whatsapp bot', 'automation', 'workflow'],
@@ -206,37 +206,37 @@ export const KNOWLEDGE: QAEntry[] = [
     keywords: ['ads', 'meta', 'facebook', 'instagram ad', 'google ad', 'marketing', 'leads', 'customers', 'grow'],
     question: 'Does Ravi manage Meta and Google Ads?',
     answer:
-      'Yes, this is his daily work. He plans and manages Meta (Facebook/Instagram) and Google Ads campaigns end to end: audience research, targeting, creatives, budgets, retargeting and optimization, tracked on CTR, CPL and lead quality. He runs lead generation, brand awareness and service promotion campaigns for Indian and international clients, and manages social media posting so the brand keeps growing between campaigns.',
+      "Ravi provides Meta and Google Ads campaign setup and management. His work includes audience targeting, retargeting, campaign optimization and performance analysis.\n\nWhat are your business goals and target audience?",
   },
   {
     keywords: ['social media', 'posting', 'instagram', 'content', 'manage', 'handle'],
     question: 'Does Ravi manage social media accounts?',
     answer:
-      'Yes. He manages social media for businesses: deciding what and how often to post, creating content, and growing the account with both organic posting and paid ads. He also runs his own tech page @theviralbihari04 on Instagram, where he posts a daily tech knowledge reel series.',
+      "Ravi helps businesses with social media management, content planning and posting strategy, alongside paid advertising.\n\nWhich platforms would you like support with?",
   },
   {
     keywords: ['website', 'web development', 'web app', 'saas', 'develop', 'build a site', 'ecommerce', 'e-commerce'],
     question: 'Can Ravi build my website or web app?',
     answer:
-      'Yes. Ravi builds business websites, e-commerce flows, dashboards and full SaaS products with React/Next.js, Node.js and modern databases, deployed on Vercel or your own server. His own products RankRaja (an AI SEO audit platform) and BillDrop (a barcode billing app that sends bills on WhatsApp) are live examples of his work. Tell me what you need built.',
+      "Ravi builds business websites, web applications, e-commerce interfaces and SaaS products using React/Next.js and Node.js.\n\nYou can explore RankRaja and BillDrop in the Projects section. What type of website or application do you need?",
   },
   {
     keywords: ['experience', 'worked', 'company', 'job', 'background', 'career'],
     question: 'What is Ravi\'s experience?',
     answer:
-      'Ravi currently works at Agarwal Taxcon as a Web Developer & Digital Marketing professional, handling client websites and Meta Ads campaigns. Before that he was a Full Stack Developer at Navsant Group (ERP systems, recruitment CRM, AI resume screening) and at Argosmob (a pet social platform and multi-role e-commerce). He also freelances in digital marketing and builds his own products.',
+      "Ravi works in web development and digital marketing at Agarwal Taxcon. His earlier full-stack roles include ERP and recruitment workflows at Navsant Group, and social and e-commerce applications at Argosmob.\n\nThe Experience section provides more detail.",
   },
   {
     keywords: ['rankraja', 'rank raja', 'seo', 'audit'],
     question: 'What is RankRaja?',
     answer:
-      'RankRaja (rank-raja.vercel.app) is Ravi\'s own AI-powered SEO audit platform. It audits a website, gives an A-F grade with a score, and explains exactly what to fix first. It also offers free tools like PDF converters, video downloaders, an icons library and an e-commerce reconciliation tool.',
+      "RankRaja is Ravi's AI-powered SEO audit platform. It provides website scores and guidance on what to improve, alongside tools for PDFs, media downloads and e-commerce reconciliation.\n\nVisit: https://rank-raja.vercel.app",
   },
   {
     keywords: ['billdrop', 'billing', 'barcode', 'bill'],
     question: 'What is BillDrop?',
     answer:
-      'BillDrop (whatsapp-billing-beta.vercel.app) is a billing app Ravi built for shops: scan a product barcode and its details fill in automatically, build the bill, and send the customer a proper PDF bill on WhatsApp instead of printing it.',
+      "BillDrop is Ravi's mobile-friendly billing app for shops. It supports barcode-based product entry, receipt previews and sharing PDF bills through WhatsApp.\n\nVisit: https://whatsapp-billing-beta.vercel.app",
   },
   {
     keywords: ['price', 'cost', 'charge', 'rate', 'budget', 'quote', 'much'],
@@ -254,13 +254,13 @@ export const KNOWLEDGE: QAEntry[] = [
     keywords: ['education', 'study', 'degree', 'college', 'bca', 'university'],
     question: 'What is Ravi\'s education?',
     answer:
-      'Ravi holds a BCA (Bachelor of Computer Applications) from GNA University, Punjab (2023-2026 batch).',
+      "Ravi holds a Bachelor of Computer Applications (BCA) from GNA University, Punjab, batch 2023-2026.",
   },
   {
     keywords: ['location', 'where', 'based', 'city', 'delhi', 'remote'],
     question: 'Where is Ravi based?',
     answer:
-      'Ravi is based in Delhi, India, and works with clients remotely anywhere - meetings happen over Google Meet.',
+      "Ravi is based in Delhi, India. Contact him by email or WhatsApp to discuss remote collaboration and a suitable meeting time.",
   },
   {
     keywords: ['freelance', 'available', 'availability', 'open to', 'full-time', 'full time', 'part'],
@@ -276,7 +276,7 @@ Facts you may use (this is everything you know - do not invent beyond it):
 ${KNOWLEDGE.map((k) => `Q: ${k.question}\nA: ${k.answer}`).join('\n\n')}
 
 Rules:
-- Be warm, brief and concrete. Use short paragraphs and plain-text bullets on separate lines for lists. Keep replies under 90 words unless asked for detail. Do not use markdown headings or bold markers.
+- Use a professional, approachable tone. Answer the visitor's question directly. Avoid hype, exclamation marks and promises about outcomes. Be brief and concrete. Use short paragraphs and plain-text bullets on separate lines for lists. Keep replies under 90 words unless asked for detail. Do not use markdown headings or bold markers.
 - Only discuss Ravi's professional services, skills, projects and how to work with him. Politely decline anything personal or unrelated.
 - Never invent prices, client names, metrics, results or promises. If asked for a quote, say pricing depends on scope and invite them to book a meeting.
 - When a visitor wants to hire, discuss a project, or talk to Ravi, collect what they need in chat and point them to Ravi's email or WhatsApp from the Contact section. Instant meeting booking in this chat is being connected - never say a meeting is booked or that Ravi was notified. If they say it is urgent, point them to the WhatsApp option in the Contact section.
