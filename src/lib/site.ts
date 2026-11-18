@@ -121,9 +121,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'School ERP',
-    tagline: 'School management software, rented per school',
+    tagline: 'School management platform with role-based panels',
     description:
-      'My own school-management software, built so that each school gets its own website and separate, secure data. Role-based panels for school admins, teachers, students and parents cover class-wise attendance, test marks and report cards, homework, and fee management with printable receipts. Real login and database keep every school\'s records isolated. The live demo runs on synthetic data only, and more modules are in progress.',
+      'A school-management platform with separate admin, teacher, student and parent views. Includes class-wise attendance, test marks, report cards, homework, and fee records with printable receipts. Built with React and Supabase, with school-level access controls tested using synthetic data. The live demo is still in development.',
     tech: ['React', 'JavaScript', 'Supabase', 'PostgreSQL', 'Row Level Security', 'Render'],
     liveUrl: 'https://school-erp-demo-7o44.onrender.com',
   },
