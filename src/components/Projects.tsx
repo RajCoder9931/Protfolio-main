@@ -1,10 +1,11 @@
 import { PROJECTS, Project } from '../lib/site';
 import Social from '../assets/Socialmedia.png';
 import Luna from '../assets/Luna.png';
-import { rankrajaShot, billdropShot, taskNotifierShot, quizLoginShot } from '../assets/projectShots';
+import { rankrajaShot, billdropShot, taskNotifierShot, quizLoginShot, schoolErpShot } from '../assets/projectShots';
 
 const IMAGES: Record<string, string> = {
   RankRaja: rankrajaShot,
+  'School ERP': schoolErpShot,
   'Task Notifier': taskNotifierShot,
   'Learn & Earn Quiz': quizLoginShot,
   BillDrop: billdropShot,
