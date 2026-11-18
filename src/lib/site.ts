@@ -120,6 +120,14 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
+    title: 'School ERP',
+    tagline: 'School management software, rented per school',
+    description:
+      'My own school-management software, built so that each school gets its own website and separate, secure data. Role-based panels for school admins, teachers, students and parents cover class-wise attendance, test marks and report cards, homework, and fee management with printable receipts. Real login and database keep every school\'s records isolated. The live demo runs on synthetic data only, and more modules are in progress.',
+    tech: ['React', 'JavaScript', 'Supabase', 'PostgreSQL', 'Row Level Security', 'Render'],
+    liveUrl: 'https://school-erp-demo-7o44.onrender.com',
+  },
+  {
     title: 'PetParivaar',
     tagline: 'Social media app for pet owners',
     description:
