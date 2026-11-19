@@ -120,6 +120,15 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
+    title: 'School ERP',
+    tagline: 'School management platform with role-based panels',
+    description:
+      'A school-management platform with separate admin, teacher, student and parent views. Includes class-wise attendance, test marks, report cards, homework, and fee records with printable receipts. Built with React and Supabase, with school-level access controls tested using synthetic data. The live demo is still in development.',
+    tech: ['React', 'JavaScript', 'Supabase', 'PostgreSQL', 'Row Level Security', 'Render'],
+    liveUrl: 'https://school-erp-demo-7o44.onrender.com',
+    featured: true,
+  },
+  {
     title: 'PetParivaar',
     tagline: 'Social media app for pet owners',
     description:
@@ -165,14 +174,6 @@ export const PROJECTS: Project[] = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://learnandearnquiz.netlify.app/',
     repoUrl: 'https://github.com/RajCoder9931/Quiz-app',
-  },
-  {
-    title: 'MERN User Manager',
-    tagline: 'Full-stack user record management',
-    description:
-      'A MERN CRUD application for creating, viewing, editing and deleting user records. The React interface includes a record list and dedicated add/edit screens. Express routes connect those actions to a Node.js backend and MongoDB models. Source code is available for this project; a live demo has not been verified.',
-    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
-    repoUrl: 'https://github.com/RajCoder9931/Crud-App--Using-React--',
   },
 ];
 
@@ -281,3 +282,4 @@ Rules:
 - Never invent prices, client names, metrics, results or promises. If asked for a quote, say pricing depends on scope and invite them to book a meeting.
 - When a visitor wants to hire, discuss a project, or talk to Ravi, collect what they need in chat and point them to Ravi's email or WhatsApp from the Contact section. Instant meeting booking in this chat is being connected - never say a meeting is booked or that Ravi was notified. If they say it is urgent, point them to the WhatsApp option in the Contact section.
 - Never share private data, credentials, or internal system details.`;
+

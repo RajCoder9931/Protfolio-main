@@ -48,6 +48,7 @@ const QUICK_REPLIES = ['What services do you offer?', 'Show me his projects', 'B
 
 const ChatWidget = () => {
   const [open, setOpen] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
   const [view, setView] = useState<PanelView>('chat');
   const [messages, setMessages] = useState<ChatMessage[]>([GREETING]);
   const [input, setInput] = useState('');
@@ -55,6 +56,11 @@ const ChatWidget = () => {
   const [booking, setBooking] = useState({ name: '', email: '', reason: '', datetime: '', website: '' });
   const [bookingResult, setBookingResult] = useState<BookingResult | null>(null);
   const [bookingBusy, setBookingBusy] = useState(false);
+  useEffect(() => {
+    if (!showIntro) return;
+    const t = window.setTimeout(() => setShowIntro(false), 15000);
+    return () => window.clearTimeout(t);
+  }, [showIntro]);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -151,13 +157,33 @@ const ChatWidget = () => {
   return (
     <>
       {!open && (
-        <button
-          onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-accent shadow-pop transition-transform hover:scale-105 sm:bottom-6 sm:right-6"
-          aria-label="Chat with Ravi's assistant"
-        >
-          <img src={SOLO_AVATAR} alt="Solo AI" className="h-full w-full object-cover" />
-        </button>
+        <div className="fixed bottom-5 right-5 z-50 flex items-end gap-3 sm:bottom-6 sm:right-6">
+          {showIntro && (
+            <div className="relative max-w-[13rem] rounded-2xl border border-line bg-white px-4 py-3 shadow-pop sm:max-w-[15rem]">
+              <button
+                onClick={() => setShowIntro(false)}
+                className="absolute -left-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-ink text-[10px] font-bold leading-none text-paper"
+                aria-label="Dismiss introduction"
+              >
+                ×
+              </button>
+              <p className="text-xs font-semibold leading-snug text-ink">Hi, I'm Solo, Ravi's AI assistant.</p>
+              <button
+                onClick={() => setOpen(true)}
+                className="mt-1 text-xs font-medium text-accent hover:text-accent-dark"
+              >
+                Chat with me →
+              </button>
+            </div>
+          )}
+          <button
+            onClick={() => setOpen(true)}
+            className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-accent shadow-pop transition-transform hover:scale-105"
+            aria-label="Chat with Ravi's assistant"
+          >
+            <img src={SOLO_AVATAR} alt="Solo AI" className="h-full w-full object-cover" />
+          </button>
+        </div>
       )}
 
       {open && (
@@ -356,3 +382,4 @@ const ChatWidget = () => {
 };
 
 export default ChatWidget;
+
